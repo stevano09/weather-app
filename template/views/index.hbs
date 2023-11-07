@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="icon" href="./img/PERAIRAN_LOGO.png">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/5606ccd767.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    {{>header}}
+        
+        <p id="msg-1"></p>
+        <p id="msg-2"></p>
+    <div class="container">
+        <div class="weather-input">
+            <h3>Enter a City Name</h3>
+            <input class="city-input" type="text" placeholder="E.g., New York, London, Tokyo">
+            <button class="search-btn">Search</button>
+            <div class="separator"></div>
+            <button class="location-btn">Use Current Location</button>
+            {{>footer}}
+        </div>
+        
+
+        <div class="weather-data hidden">
+            <div class="current-weather">
+                <div class="details">
+                    <h2 id="loc"></h2>
+                    <h6 id="temp">Temperature:</h6>
+                    <h6 id="wind">Wind:</h6>
+                    <h6 id="humy">Humidity:</h6>
+                    <h6 id="rain">Rain:</h6>
+                </div>
+                <div class="icon">
+                    <img src="${icon}" style="width=250px;" id="icon" >
+                </div>
+            </div>
+
+            <div class="days-forecast">
+                <h2>6 Days Forecast</h2>
+                <ul class="weather-cards">
+                    <li class="card">
+                        <h3 id="time">( ______ )</h3>
+                        <div class="icon">
+                            <img src="${icon}" style="width=50px;" id="icon" >
+                        </div>
+                        <h6 id="temp">Temp: __C</h6>
+                        <h6 id="wind">Wind: __ M/S</h6>
+                        <h6 id="rain">Humidity: __%</h6>
+                    </li>
+                    <li class="card">
+                        <h3 id="time">( ______ )</h3>
+                        <div class="icon">
+                            <img src="${icon}" style="width=50px;" id="icon" >
+                        </div>
+                        <h6 id="temp">Temp: __C</h6>
+                        <h6 id="wind">Wind: __ M/S</h6>
+                        <h6 id="rain">Rain: __mm</h6>
+                    </li>
+                    <li class="card">
+                        <h3 id="time">( ______ )</h3>
+                        <div class="icon">
+                            <img src="${icon}" style="width=50px;" id="icon" >
+                        </div>
+                        <h6 id="temp">Temp: __C</h6>
+                        <h6 id="wind">Wind: __ M/S</h6>
+                        <h6 id="rain">Rain: __mm</h6>
+                    </li>
+                    <li class="card">
+                        <h3 id="time">( ______ )</h3>
+                        <div class="icon">
+                            <img src="${icon}" style="width=50px;" id="icon" >
+                        </div>
+                        <h6 id="temp">Temp: __C</h6>
+                        <h6 id="wind">Wind: __ M/S</h6>
+                        <h6 id="rain">Rainmm</mm6>
+                    </li>
+                    <li class="card">
+                        <h3 id="time">( ______ )</h3>
+                        <div class="icon">
+                            <img src="${icon}" style="width=50px;" id="icon" >
+                        </div>
+                        <h6 id="temp">Temp: __C</h6>
+                        <h6 id="wind">Wind: __ M/S</h6>
+                        <h6 id="rain">Rain: __mm</h6>
+                    </li>
+                    <li class="card">
+                        <h3 id="time">( ______ )</h3>
+                        <div class="icon">
+                            <img src="${icon}" style="width=50px;" id="icon" >
+                        </div>
+                        <h6 id="temp">Temp: __C</h6>
+                        <h6 id="wind">Wind: __ M/S</h6>
+                        <h6 id="rain">Rain: __mm</h6>
+                    </li>
+                </ul>
+            </div>
+        
+    </div>
+
+    <script src="./js/scripts.js"></script>
+</body>
+
+</html>
